@@ -535,7 +535,7 @@ export const Dialog = ({
               flex-direction: column;
               gap: ${theme.spacing.sm}px;
               max-height: 70vh;
-              background: #fff;
+              background: ${theme.colors.background.primary.base};
               opacity: ${isVisible && !loading ? 1 : 0};
               transition: opacity ${getActiveFadeDuration()}ms ease-in-out;
               z-index: 2;

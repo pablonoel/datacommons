@@ -175,7 +175,7 @@ const SlideCarousel = ({
                   display: inline-block;
                   width: 10px;
                   height: 10px;
-                  background: white;
+                  background: ${theme.colors.background.primary.base};
                   border: 1px solid ${theme.colors.link.primary.base};
                   border-radius: 50%;
                   cursor: pointer;

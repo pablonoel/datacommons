@@ -506,7 +506,7 @@ export function ApiDialog({
                   border: 1px solid ${theme.colors.border.primary.light};
                   padding: ${theme.spacing.xs}px ${theme.spacing.lg}px
                     ${theme.spacing.xs}px ${theme.spacing.sm}px;
-                  background: white;
+                  background: ${theme.colors.background.primary.base};
                   min-width: 15ch;
                   max-width: 30ch;
                 }

@@ -42,7 +42,7 @@ export const KnowledgeGraphBrowser = ({
           css={css`
             padding-bottom: ${theme.spacing.x2l}px;
             margin-bottom: ${theme.spacing.x2l}px;
-            border-bottom: 1px solid rgba(220, 220, 220, 0.3);
+            border-bottom: 1px solid ${theme.colors.border.primary.light};
             &:last-of-type {
               border-bottom: none;
             }

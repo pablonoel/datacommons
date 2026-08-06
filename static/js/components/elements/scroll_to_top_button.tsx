@@ -60,7 +60,7 @@ export const ScrollToTopButton = (): JSX.Element => {
         bottom: 20px;
         right: 20px;
         background-color: ${theme.colors.link.primary.base};
-        color: white;
+        color: ${theme.colors.text.primary.light};
         border: none;
         border-radius: 50%;
         padding: 10px;

@@ -255,7 +255,7 @@ export const TabSet = ({
           top: 0;
           bottom: 0;
           left: 0;
-          background: white;
+          background: ${theme.colors.background.primary.base};
           border: none;
           cursor: pointer;
           opacity: ${showLeftArrow ? 1 : 0};
@@ -334,7 +334,7 @@ export const TabSet = ({
           display: flex;
           justify-content: center;
           align-items: center;
-          background: white;
+          background: ${theme.colors.background.primary.base};
           border: none;
           cursor: pointer;
           opacity: ${showRightArrow ? 1 : 0};
