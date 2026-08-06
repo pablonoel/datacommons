@@ -66,7 +66,7 @@ export function App({ routes }: AppProps): ReactElement {
       <hr
         css={css`
           border: none;
-          border-top: 1px solid #919191;
+          border-top: 1px solid ${theme.colors.border.primary.light};
           max-width: 1310px;
         `}
       ></hr>

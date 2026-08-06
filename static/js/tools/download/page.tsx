@@ -227,17 +227,17 @@ function App(): ReactElement {
         {showPreview && (
           <div
             css={css`
-              border: 1px solid rgba(0, 0, 0, 0.2);
+              border: 1px solid ${theme.colors.border.primary.light};
               display: flex;
               flex-direction: column;
-              border-radius: 0.25rem;
+              ${theme.radius.xs}
               gap: ${theme.spacing.lg}px;
-              background: white;
+              background: ${theme.colors.background.primary.base};
             `}
           >
             <div
               css={css`
-                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                border-bottom: 1px solid ${theme.colors.border.primary.light};
                 display: flex;
                 flex-direction: column;
                 padding: ${theme.spacing.lg}px;

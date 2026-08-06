@@ -93,7 +93,7 @@ export const MediaText = ({
             css={css`
               ${theme.elevation.low}
               ${theme.radius.lg}
-                overflow: hidden;
+              overflow: hidden;
               background-color: ${theme.colors.background.primary.light};
             `}
           >
@@ -112,7 +112,7 @@ export const MediaText = ({
             css={css`
               ${theme.elevation.low}
               ${theme.radius.lg}
-                box-sizing: border-box;
+              box-sizing: border-box;
               position: relative;
               width: 100%;
               display: block;
@@ -120,7 +120,6 @@ export const MediaText = ({
               outline: none;
               overflow: hidden;
               padding-bottom: 56.25%;
-              border-radius: 20px;
               background-color: ${theme.colors.background.primary.light};
               & > iframe,
               & > video {

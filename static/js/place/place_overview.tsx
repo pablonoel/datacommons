@@ -69,11 +69,11 @@ const PlaceOverviewTable = (props: {
         css={css`
           width: 100%;
           margin-bottom: 1rem;
-          color: #212529;
+          color: ${theme.colors.text.primary.base};
           th {
             ${theme.typography.text.md}
             font-weight: 500;
-            border-bottom: 1px solid var(--gm-3-ref-neutral-neutral-70, #ababab);
+            border-bottom: 1px solid ${theme.colors.border.primary.light};
             border-top: none;
             vertical-align: bottom;
             padding: 0 0 ${theme.spacing.md}px 0;
@@ -82,7 +82,7 @@ const PlaceOverviewTable = (props: {
             ${theme.typography.text.sm}
             padding: 12px 0;
             vertical-align: top;
-            border-bottom: 1px solid #e1e3e1;
+            border-bottom: 1px solid ${theme.colors.border.primary.light};
             &:first-of-type {
               font-weight: 500;
             }
@@ -171,9 +171,9 @@ export const PlaceOverview = (props: {
   return (
     <div
       css={css`
-        border-radius: 8px;
-        border: 1px solid var(--GM3-ref-neutral-neutral90, #e3e3e3);
-        background: rgba(211, 227, 253, 0.1);
+        ${theme.radius.sm}
+        border: 1px solid ${theme.colors.border.primary.light};
+        background: ${theme.colors.background.secondary.light};
         padding: 24px;
         margin-bottom: ${theme.spacing.md}px;
       `}

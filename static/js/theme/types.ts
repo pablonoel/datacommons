@@ -223,6 +223,9 @@ export interface Theme {
     none: {
       borderRadius: string;
     };
+    xs: {
+      borderRadius: string;
+    };
     full: {
       borderRadius: string;
     };

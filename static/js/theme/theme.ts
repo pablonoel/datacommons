@@ -297,6 +297,9 @@ const theme: Theme = {
     sm: {
       borderRadius: "8px",
     },
+    xs: {
+      borderRadius: "4px",
+    },
   },
   zIndex: {
     tooltip: 15000,

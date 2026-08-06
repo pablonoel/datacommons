@@ -55,7 +55,7 @@ export function PlaceTag(props: PlaceTagPropsType): JSX.Element {
       <i
         className="material-icons"
         css={css`
-          font-size: 16px;
+          font-size: ${theme.typography.text.md.fontSize};
           color: ${theme.colors.text.tertiary.base};
         `}
       >

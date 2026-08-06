@@ -19,7 +19,7 @@
  */
 /** @jsxImportSource @emotion/react */
 
-import { css } from "@emotion/react";
+import { css, useTheme } from "@emotion/react";
 import React, { ReactElement } from "react";
 
 import {
@@ -51,18 +51,20 @@ interface ToolChartHeaderProps {
 }
 
 export function ToolChartHeader(props: ToolChartHeaderProps): ReactElement {
+  const theme = useTheme();
   return (
     <div
       css={css`
-        border: 1px solid rgba(0, 0, 0, 0.2);
+        border: 1px solid ${theme.colors.border.primary.light};
         border-bottom: none;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         padding: 15px;
         font-size: 0.8rem;
-        border-radius: 0.25rem 0.25rem 0 0;
-        background: white;
+        border-radius: ${theme.radius.xs.borderRadius}
+          ${theme.radius.xs.borderRadius} 0 0;
+        background: ${theme.colors.background.primary.base};
       `}
     >
       <FacetSelector

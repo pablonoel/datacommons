@@ -91,7 +91,7 @@ const Partners = ({ partners, gaEvent }: PartnersProps): ReactElement => {
               }}
               css={css`
                 display: block;
-                border-radius: 300px;
+                ${theme.radius.full}
                 transition: transform 0.3s ease-in-out, border 0.3s ease-in-out,
                   box-shadow 0.3s ease-in-out;
                 border: 2px solid transparent;

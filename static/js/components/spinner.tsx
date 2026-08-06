@@ -14,6 +14,9 @@
  * limitations under the License.
  */
 
+/** @jsxImportSource @emotion/react */
+
+import { css, useTheme } from "@emotion/react";
 import React from "react";
 
 interface SpinnerProps {
@@ -21,8 +24,17 @@ interface SpinnerProps {
 }
 
 export function Spinner(props: SpinnerProps): JSX.Element {
+  const theme = useTheme();
   return (
-    <div id="screen" style={{ display: props.isOpen ? "block" : "none" }}>
+    <div
+      id="screen"
+      style={{ display: props.isOpen ? "block" : "none" }}
+      css={css`
+        #spinner::after {
+          border-top-color: ${theme.components.spinner.variant.standard.color};
+        }
+      `}
+    >
       <div id="spinner" />
       <div id="spinner-text" />
     </div>

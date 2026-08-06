@@ -20,6 +20,7 @@ import {} from "googlemaps";
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
+import theme from "../theme/theme";
 import { toTitleCase } from "../tools/shared_util";
 import { getPlaceDcids } from "../utils/place_utils";
 import { Chip } from "./chip";
@@ -43,7 +44,7 @@ const HARDCODED_RESULTS = {
   "south america": SOUTH_AMERICA_DCID,
   southamerica: SOUTH_AMERICA_DCID,
 };
-const CHIP_COLOR = "rgba(66, 133, 244, 0.08)";
+const CHIP_COLOR = theme.colors.background.secondary.light;
 
 interface PlaceSearchBarPropType {
   places: Record<string, string>;

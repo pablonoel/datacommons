@@ -19,7 +19,7 @@
  * Title component for the tools
  */
 
-import { css } from "@emotion/react";
+import { css, useTheme } from "@emotion/react";
 import React from "react";
 
 interface ToolHeaderProps {
@@ -28,6 +28,7 @@ interface ToolHeaderProps {
 }
 
 export function ToolHeader(props: ToolHeaderProps): JSX.Element {
+  const theme = useTheme();
   return (
     <div
       css={css`
@@ -58,9 +59,7 @@ export function ToolHeader(props: ToolHeaderProps): JSX.Element {
       {props.subtitle && (
         <div
           css={css`
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 24px;
+            ${theme.typography.text.md}
           `}
         >
           {props.subtitle}

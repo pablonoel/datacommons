@@ -295,7 +295,7 @@ const ShowNextButton = styled(Button)`
   justify-content: center;
   width: 18px;
   height: 18px;
-  background-color: var(--gm-3-ref-primary-primary-40, #0b57d0);
+  background-color: ${(props): string => props.theme.colors.link.primary.base};
   border-radius: 50%;
   border: none;
   padding: 0;
@@ -308,7 +308,7 @@ const ShowNextButton = styled(Button)`
   }
 
   svg {
-    fill: white;
+    fill: ${(props): string => props.theme.colors.text.primary.light};
     width: 22px;
     height: 22px;
   }

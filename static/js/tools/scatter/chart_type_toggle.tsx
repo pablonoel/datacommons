@@ -37,7 +37,7 @@ export function ChartTypeToggle(): JSX.Element {
   return (
     <div
       css={css`
-        border-radius: 0.25rem;
+        ${theme.radius.xs}
         border: 1px solid ${theme.colors.border.primary.light};
         display: flex;
         flex-direction: row;
@@ -60,7 +60,7 @@ export function ChartTypeToggle(): JSX.Element {
           onClick={(): void => display.setChartType(ScatterChartType.SCATTER)}
           startIcon={<ScatterPlot />}
           css={css`
-            border-radius: 0.25rem;
+            ${theme.radius.xs}
           `}
         />
       </Tooltip>
@@ -75,7 +75,7 @@ export function ChartTypeToggle(): JSX.Element {
           onClick={(): void => display.setChartType(ScatterChartType.MAP)}
           startIcon={<Public />}
           css={css`
-            border-radius: 0.25rem;
+            ${theme.radius.xs}
           `}
         />
       </Tooltip>
