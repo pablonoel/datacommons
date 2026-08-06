@@ -53,7 +53,7 @@ export const MediaText = ({
       css={css`
         display: grid;
         grid-template-columns: 6fr 4fr;
-        gap: ${theme.spacing.md}px ${theme.spacing.xxl}px;
+        gap: ${theme.spacing.md}px ${theme.spacing.x2l}px;
         @media (max-width: ${theme.breakpoints.md}px) {
           gap: ${theme.spacing.md}px ${theme.spacing.xl}px;
         }
@@ -91,8 +91,8 @@ export const MediaText = ({
         {mediaType === "image" ? (
           <figure
             css={css`
-              ${theme.elevation.secondary}
-              ${theme.radius.secondary}
+              ${theme.elevation.low}
+              ${theme.radius.lg}
                 overflow: hidden;
               background-color: ${theme.colors.background.primary.light};
             `}
@@ -110,8 +110,8 @@ export const MediaText = ({
         ) : (
           <div
             css={css`
-              ${theme.elevation.secondary}
-              ${theme.radius.secondary}
+              ${theme.elevation.low}
+              ${theme.radius.lg}
                 box-sizing: border-box;
               position: relative;
               width: 100%;

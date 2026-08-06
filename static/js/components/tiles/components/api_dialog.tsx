@@ -430,7 +430,7 @@ export function ApiDialog({
                     css={css`
                       && {
                         padding: 1px ${theme.spacing.xs}px;
-                        ${theme.typography.family.code}}
+                        ${theme.typography.family.code}
                         font-size: 100%;
                         color: ${theme.colors.text.code.base};
                       }
@@ -502,7 +502,7 @@ export function ApiDialog({
                   cursor: pointer;
                   ${theme.typography.family.text}
                   ${theme.typography.text.sm}
-                  ${theme.radius.quaternary}
+                  ${theme.radius.sm}
                   border: 1px solid ${theme.colors.border.primary.light};
                   padding: ${theme.spacing.xs}px ${theme.spacing.lg}px
                     ${theme.spacing.xs}px ${theme.spacing.sm}px;

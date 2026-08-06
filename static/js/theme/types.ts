@@ -37,7 +37,18 @@ export interface FontFamily {
   [key: string]: string;
 }
 
-interface ButtonVariant {
+export interface LinkBoxVariant {
+  backgroundColor: string;
+  textDecoration: string;
+  [key: string]:
+    | string
+    | number
+    | {
+        backgroundColor: string;
+      };
+}
+
+export interface ButtonVariant {
   backgroundColor: string;
   color: string;
   border: string;
@@ -67,14 +78,14 @@ export interface Theme {
     md: number;
     lg: number;
     xl: number;
-    xxl: number;
-    huge: number;
+    x2l: number;
+    x3l: number;
   };
   sections: {
-    compact: number;
-    small: number;
-    standard: number;
-    large: number;
+    xs: number;
+    sm: number;
+    md: number;
+    lg: number;
   };
   width: {
     sm: number;
@@ -82,20 +93,14 @@ export interface Theme {
     lg: number;
     xl: number;
   };
+  icons: {
+    xs: number;
+    sm: number;
+    md: number;
+    lg: number;
+    xl: number;
+  };
   colors: {
-    blacks?: {
-      A000: string;
-      A100: string;
-      A200: string;
-      A300: string;
-      A400: string;
-      A500: string;
-      A600: string;
-      A700: string;
-      A800: string;
-      A900: string;
-      A950: string;
-    };
     text?: {
       primary?: {
         base?: string;
@@ -118,17 +123,12 @@ export interface Theme {
         dark?: string;
       };
     };
-    border?: {
+    error?: {
       primary?: {
         base?: string;
         light?: string;
         dark?: string;
       };
-    };
-    tabs?: {
-      selected?: string;
-      unselected?: string;
-      lining?: string;
     };
     background?: {
       primary?: {
@@ -147,60 +147,11 @@ export interface Theme {
         dark?: string;
       };
     };
-    button?: {
+    border?: {
       primary?: {
         base?: string;
         light?: string;
         dark?: string;
-      };
-      secondary?: {
-        base?: string;
-        light?: string;
-        dark?: string;
-      };
-      tertiary?: {
-        base?: string;
-        light?: string;
-        dark?: string;
-      };
-    };
-    error?: {
-      primary?: {
-        base?: string;
-        light?: string;
-        dark?: string;
-      };
-    };
-    box: {
-      blue: {
-        text: string;
-        tag: string;
-        pill: string;
-      };
-      green: {
-        text: string;
-        tag: string;
-        pill: string;
-      };
-      red: {
-        text: string;
-        tag: string;
-        pill: string;
-      };
-      yellow: {
-        text: string;
-        tag: string;
-        pill: string;
-      };
-      grey: {
-        text: string;
-        tag: string;
-        pill: string;
-      };
-      tooltip: {
-        text: string;
-        tag: string;
-        pill: string;
       };
     };
     link?: {
@@ -257,121 +208,14 @@ export interface Theme {
       xl: TextVariant;
     };
   };
-  box: {
-    primary?: {
-      backgroundColor: string;
-      textDecoration: string;
-      [key: string]:
-        | string
-        | number
-        | {
-            backgroundColor: string;
-          };
-    };
-    secondary?: {
-      backgroundColor: string;
-      textDecoration: string;
-      [key: string]:
-        | string
-        | number
-        | {
-            backgroundColor: string;
-          };
-    };
-    tertiary?: {
-      backgroundColor: string;
-      textDecoration: string;
-      [key: string]:
-        | string
-        | number
-        | {
-            backgroundColor: string;
-          };
-    };
-  };
-  button: {
-    variant: {
-      standard?: ButtonVariant;
-      inverted?: ButtonVariant;
-      text?: ButtonVariant;
-      flat?: ButtonVariant;
-      light?: ButtonVariant;
-    };
-    size: {
-      sm?: {
-        padding: string;
-      };
-      md?: {
-        padding: string;
-      };
-      lg?: {
-        padding: string;
-      };
-    };
-  };
-  infoBox: {
-    backgroundColor: string;
-    heading: TextVariant;
-    icon: {
-      fontSize: string;
-      lineHeight: string;
-      [key: string]:
-        | string
-        | {
-            fontSize?: string;
-            lineHeight?: string;
-          };
-    };
-  };
-  codeHighlight: {
-    background?: string;
-    border?: string;
-    text?: string;
-    highlight?: string;
-    selection?: string;
-    comment?: string;
-    prolog?: string;
-    doctype?: string;
-    cData?: string;
-    punctuation?: string;
-    property?: string;
-    tag?: string;
-    boolean?: string;
-    number?: string;
-    constant?: string;
-    symbol?: string;
-    deleted?: string;
-    selector?: string;
-    attrName?: string;
-    string?: string;
-    char?: string;
-    builtin?: string;
-    inserted?: string;
-    operator?: string;
-    entity?: string;
-    url?: string;
-    langCSS?: string;
-    atrule?: string;
-    attrValue?: string;
-    keyword?: string;
-    function?: string;
-    className?: string;
-    regex?: string;
-    important?: string;
-    variable?: string;
-    csvHeader?: string;
-    csvSeparator?: string;
-    csvValue?: string;
-    csvStringValue?: string;
-  };
   elevation: {
     none: {
       boxShadow: string;
     };
-    primary: {
+    high: {
       boxShadow: string;
     };
-    secondary: {
+    low: {
       boxShadow: string;
     };
   };
@@ -382,25 +226,166 @@ export interface Theme {
     full: {
       borderRadius: string;
     };
-    primary: {
+    xl: {
       borderRadius: string;
     };
-    secondary: {
+    lg: {
       borderRadius: string;
     };
-    tertiary: {
+    md: {
       borderRadius: string;
     };
-    quaternary: {
+    sm: {
       borderRadius: string;
     };
   };
   zIndex: {
     tooltip: number;
     dialog: number;
+    header: number;
+    drawer: number;
+    overlay: number;
+    widget: number;
   };
-  tooltip: {
-    width?: string;
+  components: {
+    linkBox: {
+      standard?: LinkBoxVariant;
+      inverted?: LinkBoxVariant;
+    };
+    tabs: {
+      selected?: string;
+      unselected?: string;
+      lining?: string;
+    };
+    cards: {
+      variant?: {
+        blue: {
+          text: string;
+          tag: string;
+          pill: string;
+        };
+        green: {
+          text: string;
+          tag: string;
+          pill: string;
+        };
+        red: {
+          text: string;
+          tag: string;
+          pill: string;
+        };
+        yellow: {
+          text: string;
+          tag: string;
+          pill: string;
+        };
+        grey: {
+          text: string;
+          tag: string;
+          pill: string;
+        };
+      };
+    };
+    button: {
+      variant: {
+        standard?: ButtonVariant;
+        inverted?: ButtonVariant;
+        text?: ButtonVariant;
+        flat?: ButtonVariant;
+        light?: ButtonVariant;
+      };
+      size: {
+        sm?: {
+          padding: string;
+        };
+        md?: {
+          padding: string;
+        };
+        lg?: {
+          padding: string;
+        };
+      };
+    };
+    tooltip: {
+      variant: {
+        standard: {
+          text?: string;
+          tag?: string;
+          pill?: string;
+        };
+      };
+      size: {
+        md: {
+          width?: string;
+        };
+      };
+    };
+    spinner: {
+      variant: {
+        standard: {
+          color: string;
+        };
+      };
+    };
+    infoBox: {
+      backgroundColor: string;
+      heading: TextVariant;
+      icon: {
+        fontSize: string;
+        lineHeight: string;
+        [key: string]:
+          | string
+          | {
+              fontSize?: string;
+              lineHeight?: string;
+            };
+      };
+    };
+    placeTypeSelect: {
+      borderColor: string;
+      boxShadow: string;
+    };
+    codeHighlight: {
+      background?: string;
+      border?: string;
+      text?: string;
+      highlight?: string;
+      selection?: string;
+      comment?: string;
+      prolog?: string;
+      doctype?: string;
+      cData?: string;
+      punctuation?: string;
+      property?: string;
+      tag?: string;
+      boolean?: string;
+      number?: string;
+      constant?: string;
+      symbol?: string;
+      deleted?: string;
+      selector?: string;
+      attrName?: string;
+      string?: string;
+      char?: string;
+      builtin?: string;
+      inserted?: string;
+      operator?: string;
+      entity?: string;
+      url?: string;
+      langCSS?: string;
+      atrule?: string;
+      attrValue?: string;
+      keyword?: string;
+      function?: string;
+      className?: string;
+      regex?: string;
+      important?: string;
+      variable?: string;
+      csvHeader?: string;
+      csvSeparator?: string;
+      csvValue?: string;
+      csvStringValue?: string;
+    };
   };
   search: {
     height: string;

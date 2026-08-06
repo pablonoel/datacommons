@@ -20,6 +20,8 @@
 
 import { Theme } from "./types";
 
+// constants
+
 const BREAKPOINTS = {
   xs: 0,
   sm: 576,
@@ -35,15 +37,15 @@ const SPACING = {
   md: 16,
   lg: 24,
   xl: 32,
-  xxl: 48,
-  huge: 64,
+  x2l: 48,
+  x3l: 64,
 };
 
 const SECTIONS = {
-  compact: 0,
-  small: 32,
-  standard: 64,
-  large: 110,
+  xs: 0,
+  sm: 32,
+  md: 64,
+  lg: 110,
 };
 
 const WIDTH = {
@@ -54,159 +56,119 @@ const WIDTH = {
   xl: 1310,
 };
 
-const DC_BLACK = "hsl(0, 0%, 18.82%)";
+const ICONS = {
+  xs: 12,
+  sm: 18,
+  md: 24,
+  lg: 32,
+  xl: 48,
+};
 
-const DC_BLACK_30 = "hsl(0, 0.00%, 30%)";
-
-const DC_BLACK_70 = "hsl(0, 0.00%, 70%)";
-const DC_BLACK_80 = "hsl(0, 0.00%, 80%)";
-
-const DC_WHITE = "hsl(255, 100%, 100%)";
-const DC_BONE = "hsl(216, 55%, 98%)";
-
-const DC_BLUE = "hsl(217, 90%, 43%)";
-const DC_BLUE_DARK = "hsl(217, 90%, 15%)";
-const DC_BLUE_LIGHT = "hsl(218, 57%, 63%)";
-const DC_BLUE_LIGHTER = "hsl(204, 100%, 88%)";
-const DC_BLUE_LIGHTEST = "hsl(204, 100%, 88%, 33%)";
-const DC_BLUE_WHITE = "hsl(220, 100%, 98%)";
-const DC_BLUE_WHITE_LIGHT = "hsl(217, 90%, 95%)";
-
-const DC_BLUE_PILL_TEXT = "hsl(217, 90%, 15%)";
-const DC_BLUE_PILL_BCKG = "hsl(218, 92%, 95%)";
-const DC_BLUE_PILL_BCKG_HOVER = "hsl(204, 90%, 80%)";
-
-const DC_GREEN = "hsl(137, 68%, 25%)";
-const DC_GREEN_PILL_TEXT = "hsl(139, 70%, 9%)";
-const DC_GREEN_PILL_BCKG = "hsl(137, 55%, 85%)";
-
-const DC_RED = "hsl(3, 71%, 41%)";
-const DC_RED_PILL_TEXT = "hsl(3, 71%, 15%)";
-const DC_RED_PILL_BCKG = "hsl(4, 71%, 92%)";
-
-const DC_YELLOW = "hsl(35, 100%, 29%)";
-const DC_YELLOW_PILL_TEXT = "hsl(3, 71%, 15%)";
-const DC_YELLOW_PILL_BCKG = "hsl(40, 100%, 91%)";
-
-const DC_ORANGE = "hsl(26 100% 35.9%)";
-const DC_YELLOW_DARK = "hsl(43 100% 35.9%)";
-
-const DC_GRAY_DARK = "hsl(200, 2.9%, 41.2%)";
-const DC_GRAY = "hsl(160, 2%, 27%)";
-const DC_GRAY_LIGHT = "hsl(0, 0%, 48%)";
-const DC_GRAY_LINING = "hsl(140, 3%, 77%)";
-const DC_GRAY_TOOLTIP = "hsl(213, 43%, 96%)";
-
-const DC_GRAY_PILL_TEXT = DC_YELLOW;
-const DC_GRAY_PILL_BCKG = "hsl(240, 29%, 91%)";
+// COLORS;
+// basic;
+const COLOR_WHITE = "#ffffff";
+// Greys
+const COLOR_BONE = "#f6faff";
+const COLOR_OBSIDIAN = "#303030";
+const COLOR_ASH = "#4d4d4d";
+const COLOR_FOG = "#b3b3b3";
+const COLOR_CLOUD = "#cccccc";
+const COLOR_SLATE = "#464746";
+const COLOR_CHARCOAL = "#696a6b";
+const COLOR_STEEL = "#7a7a7a";
+const COLOR_LINEN = "#c4c7c4";
+const COLOR_SNOW = "#f5f9ff";
+const COLOR_MIST = "#e6e7f5";
+// Blues
+const COLOR_OCEAN = "#1656e2";
+const COLOR_MIDNIGHT = "#091842";
+const COLOR_SKY = "#85a9e6";
+const COLOR_GLACIER = "#cce6ff";
+const COLOR_ICEBERG = "#f2f8ff";
+const COLOR_POLAR = "#dce6fb";
+const COLOR_NAVY = "#041e49";
+const COLOR_BREEZE = "#e7f3fe";
+const COLOR_ARTIC = "#b3dcfa";
+// Greens
+const COLOR_LEAF = "#1d6f3e";
+const COLOR_PINE = "#0e2f19";
+const COLOR_MINT = "#d2f0e2";
+// Reds
+const COLOR_CRIMSON = "#ba3b36";
+const COLOR_EMBER = "#4d0f0e";
+const COLOR_BLUSH = "#fbe6e5";
+// Yellows
+const COLOR_OCHRE = "#c27c00";
+const COLOR_YELLOW = "#b78300";
+const COLOR_SUNSHINE = "#fff4dc";
+// Orange
+const COLOR_ORANGE = "#b74f00";
 
 const theme: Theme = {
   breakpoints: BREAKPOINTS,
   spacing: SPACING,
   sections: SECTIONS,
   width: WIDTH,
+  icons: ICONS,
   colors: {
     text: {
       primary: {
-        base: DC_BLACK,
-        dark: DC_BLUE_DARK,
-        light: DC_WHITE,
+        base: COLOR_OBSIDIAN,
+        dark: COLOR_MIDNIGHT,
+        light: COLOR_WHITE,
       },
       secondary: {
-        base: DC_GRAY,
-        dark: DC_BLACK_80,
-        light: DC_GRAY_PILL_BCKG,
+        base: COLOR_SLATE,
+        dark: COLOR_CLOUD,
+        light: COLOR_MIST,
       },
       tertiary: {
-        base: DC_GRAY_LIGHT,
-        dark: DC_GRAY_DARK,
+        base: COLOR_STEEL,
+        dark: COLOR_CHARCOAL,
+        light: COLOR_STEEL,
       },
       code: {
-        base: DC_GREEN,
-        light: DC_GREEN_PILL_BCKG,
-        dark: DC_GREEN_PILL_TEXT,
+        base: COLOR_LEAF,
+        light: COLOR_MINT,
+        dark: COLOR_MINT,
       },
     },
     background: {
       primary: {
-        base: DC_WHITE,
-        dark: DC_BLUE_DARK,
-        light: DC_BLUE_WHITE,
+        base: COLOR_WHITE,
+        dark: COLOR_MIDNIGHT,
+        light: COLOR_ICEBERG,
       },
       secondary: {
-        base: DC_BONE,
-        dark: DC_GRAY,
-        light: DC_BLUE_WHITE,
+        base: COLOR_BONE,
+        dark: COLOR_SLATE,
+        light: COLOR_ICEBERG,
       },
     },
     border: {
       primary: {
-        base: DC_WHITE,
-        dark: DC_BLUE_DARK,
-        light: DC_BLACK_80,
-      },
-    },
-    tabs: {
-      selected: DC_BLUE,
-      unselected: DC_BLACK_30,
-      lining: DC_GRAY_LINING,
-    },
-    box: {
-      blue: {
-        text: DC_BLUE,
-        tag: DC_BLUE_PILL_TEXT,
-        pill: DC_BLUE_PILL_BCKG,
-      },
-      green: {
-        text: DC_GREEN,
-        tag: DC_GREEN_PILL_TEXT,
-        pill: DC_GREEN_PILL_BCKG,
-      },
-      red: {
-        text: DC_RED,
-        tag: DC_RED_PILL_TEXT,
-        pill: DC_RED_PILL_BCKG,
-      },
-      yellow: {
-        text: DC_YELLOW,
-        tag: DC_YELLOW_PILL_TEXT,
-        pill: DC_YELLOW_PILL_BCKG,
-      },
-      grey: {
-        text: DC_GRAY,
-        tag: DC_GRAY_PILL_TEXT,
-        pill: DC_GRAY_PILL_BCKG,
-      },
-      tooltip: {
-        text: DC_GRAY,
-        tag: DC_BLUE,
-        pill: DC_GRAY_TOOLTIP,
+        base: COLOR_WHITE,
+        dark: COLOR_MIDNIGHT,
+        light: COLOR_CLOUD,
       },
     },
     link: {
       primary: {
-        base: DC_BLUE,
-        light: DC_BLUE_LIGHT,
-        dark: DC_BLUE_DARK,
+        base: COLOR_OCEAN,
+        light: COLOR_SKY,
+        dark: COLOR_MIDNIGHT,
       },
       secondary: {
-        base: DC_GRAY,
-        light: DC_BLACK_80,
-        dark: DC_BLACK,
-      },
-    },
-    button: {
-      primary: {
-        base: DC_BLUE,
-        light: DC_BLUE_LIGHT,
-        dark: DC_BLUE_DARK,
+        base: COLOR_SLATE,
+        light: COLOR_CLOUD,
+        dark: COLOR_OBSIDIAN,
       },
     },
     error: {
       primary: {
-        base: DC_RED,
-        light: DC_YELLOW,
-        dark: DC_RED_PILL_TEXT,
+        base: COLOR_CRIMSON,
+        light: COLOR_OCHRE,
+        dark: COLOR_EMBER,
       },
     },
   },
@@ -304,162 +266,15 @@ const theme: Theme = {
       },
     },
   },
-  box: {
-    primary: {
-      backgroundColor: DC_BONE,
-      textDecoration: "none",
-      ["&:hover:not(:disabled)"]: {
-        backgroundColor: DC_BLUE_PILL_BCKG,
-      },
-    },
-    secondary: {
-      backgroundColor: DC_BLUE_LIGHTER,
-      textDecoration: "none",
-      ["&:hover:not(:disabled)"]: {
-        backgroundColor: DC_BLUE_PILL_BCKG_HOVER,
-      },
-    },
-  },
-  button: {
-    variant: {
-      standard: {
-        color: DC_BLUE,
-        backgroundColor: DC_WHITE,
-        border: `1px solid ${DC_BLACK_70}`,
-        borderRadius: `1000px`,
-        ["&:hover:not(:disabled):not([aria-disabled])"]: {
-          backgroundColor: DC_WHITE,
-          color: DC_BLUE,
-          border: `1px solid ${DC_BLUE}`,
-        },
-      },
-      inverted: {
-        color: DC_BLUE,
-        backgroundColor: DC_BLUE_LIGHTER,
-        border: `1px solid ${DC_BLUE_LIGHTER}`,
-        borderRadius: `1000px`,
-        ["&:hover:not(:disabled):not([aria-disabled])"]: {
-          backgroundColor: DC_BLUE_LIGHTER,
-          color: DC_BLUE,
-          border: `1px solid ${DC_BLUE}`,
-        },
-      },
-      text: {
-        color: DC_BLUE,
-        backgroundColor: "transparent",
-        border: `1px solid transparent`,
-        borderRadius: `1000px`,
-        ["&:hover:not(:disabled):not([aria-disabled])"]: {
-          backgroundColor: "transparent",
-          color: DC_BLUE,
-          border: `1px solid ${DC_BLUE}`,
-        },
-      },
-      flat: {
-        color: DC_BLUE,
-        backgroundColor: DC_BLUE_WHITE_LIGHT,
-        border: `1px solid ${DC_BLUE_WHITE_LIGHT}`,
-        borderRadius: "100px",
-        ["&:hover:not(:disabled):not([aria-disabled])"]: {
-          backgroundColor: DC_BLUE_WHITE_LIGHT,
-          color: DC_BLUE,
-          border: `1px solid ${DC_BLUE}`,
-        },
-      },
-      light: {
-        color: DC_GRAY_LIGHT,
-        backgroundColor: "transparent",
-        border: "none",
-        borderRadius: "none",
-        ["&:hover:not(:disabled):not([aria-disabled])"]: {
-          backgroundColor: "transparent",
-          color: DC_BLUE,
-          border: "none",
-        },
-      },
-    },
-    size: {
-      sm: {
-        padding: `7px ${SPACING.md}px`,
-      },
-      md: {
-        padding: `11px ${SPACING.md}px 9px`,
-      },
-      lg: {
-        padding: `15px ${SPACING.lg}px`,
-      },
-    },
-  },
-  infoBox: {
-    backgroundColor: DC_BLUE_LIGHTEST,
-    icon: {
-      fontSize: "1.5rem",
-      lineHeight: "2rem",
-      [`@media (max-width: ${BREAKPOINTS.sm}px)`]: {
-        fontSize: "1.35rem",
-        lineHeight: "1.5rem",
-      },
-    },
-    heading: {
-      fontSize: "1.5rem",
-      lineHeight: "2rem",
-      fontWeight: 500,
-      [`@media (max-width: ${BREAKPOINTS.sm}px)`]: {
-        fontSize: "1.35rem",
-        lineHeight: "1.75rem",
-      },
-    },
-  },
-  codeHighlight: {
-    background: DC_WHITE,
-    border: DC_BLACK_80,
-    text: DC_GRAY,
-    highlight: DC_YELLOW_PILL_BCKG,
-    selection: DC_BLUE_WHITE_LIGHT,
-    comment: DC_GRAY_LIGHT,
-    prolog: DC_GRAY_LIGHT,
-    doctype: DC_GRAY_LIGHT,
-    cData: DC_GRAY_LIGHT,
-    punctuation: DC_BLUE_DARK,
-    property: DC_BLUE,
-    tag: DC_BLUE,
-    boolean: DC_BLUE,
-    number: DC_BLUE,
-    constant: DC_BLUE,
-    symbol: DC_BLUE,
-    deleted: DC_BLUE,
-    selector: DC_GREEN,
-    attrName: DC_GREEN,
-    string: DC_GREEN,
-    char: DC_GREEN,
-    builtin: DC_GREEN,
-    inserted: DC_GREEN,
-    operator: DC_ORANGE,
-    entity: DC_ORANGE,
-    url: DC_ORANGE,
-    langCSS: DC_ORANGE,
-    atrule: DC_BLUE,
-    attrValue: DC_BLUE,
-    keyword: DC_BLUE,
-    function: DC_BLUE,
-    className: DC_BLUE,
-    regex: DC_YELLOW_DARK,
-    important: DC_YELLOW_DARK,
-    variable: DC_YELLOW_DARK,
-    csvHeader: DC_GREEN,
-    csvSeparator: DC_ORANGE,
-    csvStringValue: DC_GRAY_LIGHT,
-    csvValue: DC_BLUE,
-  },
   elevation: {
     none: {
       boxShadow: "none",
     },
-    primary: {
+    high: {
       boxShadow:
         "0px 1px 2px hsla(0, 0%, 0%, 0.3), 0px 1px 3px 1px hsla(0, 0%, 0%, 0.15)",
     },
-    secondary: {
+    low: {
       boxShadow: "0 2px 5px hsla(0,0%,0%,0.1)",
     },
   },
@@ -470,25 +285,234 @@ const theme: Theme = {
     full: {
       borderRadius: "1000px",
     },
-    primary: {
+    xl: {
       borderRadius: "32px",
     },
-    secondary: {
+    lg: {
       borderRadius: "20px",
     },
-    tertiary: {
+    md: {
       borderRadius: "12px",
     },
-    quaternary: {
+    sm: {
       borderRadius: "8px",
     },
   },
   zIndex: {
     tooltip: 15000,
     dialog: 10000,
+    header: 9000,
+    drawer: 8000,
+    overlay: 11000,
+    widget: 7000,
   },
-  tooltip: {
-    width: "300px",
+  components: {
+    linkBox: {
+      standard: {
+        backgroundColor: COLOR_BONE,
+        textDecoration: "none",
+        ["&:hover:not(:disabled)"]: {
+          backgroundColor: COLOR_BREEZE,
+        },
+      },
+      inverted: {
+        backgroundColor: COLOR_GLACIER,
+        textDecoration: "none",
+        ["&:hover:not(:disabled)"]: {
+          backgroundColor: COLOR_ARTIC,
+        },
+      },
+    },
+    tabs: {
+      selected: COLOR_OCEAN,
+      unselected: COLOR_ASH,
+      lining: COLOR_LINEN,
+    },
+    cards: {
+      variant: {
+        blue: {
+          text: COLOR_OCEAN,
+          tag: COLOR_NAVY,
+          pill: COLOR_BREEZE,
+        },
+        green: {
+          text: COLOR_LEAF,
+          tag: COLOR_PINE,
+          pill: COLOR_MINT,
+        },
+        red: {
+          text: COLOR_CRIMSON,
+          tag: COLOR_EMBER,
+          pill: COLOR_BLUSH,
+        },
+        yellow: {
+          text: COLOR_OCHRE,
+          tag: COLOR_EMBER,
+          pill: COLOR_SUNSHINE,
+        },
+        grey: {
+          text: COLOR_SLATE,
+          tag: COLOR_SLATE,
+          pill: COLOR_MIST,
+        },
+      },
+    },
+    button: {
+      variant: {
+        standard: {
+          color: COLOR_OCEAN,
+          backgroundColor: COLOR_WHITE,
+          border: `1px solid ${COLOR_FOG}`,
+          borderRadius: `1000px`,
+          ["&:hover:not(:disabled):not([aria-disabled])"]: {
+            backgroundColor: COLOR_WHITE,
+            color: COLOR_OCEAN,
+            border: `1px solid ${COLOR_OCEAN}`,
+          },
+        },
+        inverted: {
+          color: COLOR_OCEAN,
+          backgroundColor: COLOR_GLACIER,
+          border: `1px solid ${COLOR_GLACIER}`,
+          borderRadius: `1000px`,
+          ["&:hover:not(:disabled):not([aria-disabled])"]: {
+            backgroundColor: COLOR_GLACIER,
+            color: COLOR_OCEAN,
+            border: `1px solid ${COLOR_OCEAN}`,
+          },
+        },
+        text: {
+          color: COLOR_OCEAN,
+          backgroundColor: "transparent",
+          border: `1px solid transparent`,
+          borderRadius: `1000px`,
+          ["&:hover:not(:disabled):not([aria-disabled])"]: {
+            backgroundColor: "transparent",
+            color: COLOR_OCEAN,
+            border: `1px solid ${COLOR_OCEAN}`,
+          },
+        },
+        flat: {
+          color: COLOR_OCEAN,
+          backgroundColor: COLOR_POLAR,
+          border: `1px solid ${COLOR_POLAR}`,
+          borderRadius: "100px",
+          ["&:hover:not(:disabled):not([aria-disabled])"]: {
+            backgroundColor: COLOR_POLAR,
+            color: COLOR_OCEAN,
+            border: `1px solid ${COLOR_OCEAN}`,
+          },
+        },
+        light: {
+          color: COLOR_STEEL,
+          backgroundColor: "transparent",
+          border: "none",
+          borderRadius: "none",
+          ["&:hover:not(:disabled):not([aria-disabled])"]: {
+            backgroundColor: "transparent",
+            color: COLOR_OCEAN,
+            border: "none",
+          },
+        },
+      },
+      size: {
+        sm: {
+          padding: `7px ${SPACING.md}px`,
+        },
+        md: {
+          padding: `11px ${SPACING.md}px 9px`,
+        },
+        lg: {
+          padding: `15px ${SPACING.lg}px`,
+        },
+      },
+    },
+    tooltip: {
+      variant: {
+        standard: {
+          text: COLOR_SLATE,
+          tag: COLOR_OCEAN,
+          pill: COLOR_SNOW,
+        },
+      },
+      size: {
+        md: {
+          width: "300px",
+        },
+      },
+    },
+    spinner: {
+      variant: {
+        standard: {
+          color: COLOR_OCEAN,
+        },
+      },
+    },
+    infoBox: {
+      backgroundColor: COLOR_GLACIER,
+      icon: {
+        fontSize: "1.5rem",
+        lineHeight: "2rem",
+        [`@media (max-width: ${BREAKPOINTS.sm}px)`]: {
+          fontSize: "1.35rem",
+          lineHeight: "1.5rem",
+        },
+      },
+      heading: {
+        fontSize: "1.5rem",
+        lineHeight: "2rem",
+        fontWeight: 500,
+        [`@media (max-width: ${BREAKPOINTS.sm}px)`]: {
+          fontSize: "1.35rem",
+          lineHeight: "1.75rem",
+        },
+      },
+    },
+    placeTypeSelect: {
+      borderColor: COLOR_OCEAN,
+      boxShadow: `0 0 0 0.2rem ${COLOR_SKY}`,
+    },
+    codeHighlight: {
+      background: COLOR_WHITE,
+      border: COLOR_CLOUD,
+      text: COLOR_SLATE,
+      highlight: COLOR_SUNSHINE,
+      selection: COLOR_SKY,
+      comment: COLOR_STEEL,
+      prolog: COLOR_STEEL,
+      doctype: COLOR_STEEL,
+      cData: COLOR_STEEL,
+      punctuation: COLOR_NAVY,
+      property: COLOR_OCEAN,
+      tag: COLOR_OCEAN,
+      boolean: COLOR_OCEAN,
+      number: COLOR_OCEAN,
+      constant: COLOR_OCEAN,
+      symbol: COLOR_OCEAN,
+      deleted: COLOR_OCEAN,
+      selector: COLOR_LEAF,
+      attrName: COLOR_LEAF,
+      string: COLOR_LEAF,
+      char: COLOR_LEAF,
+      builtin: COLOR_LEAF,
+      inserted: COLOR_LEAF,
+      operator: COLOR_ORANGE,
+      entity: COLOR_ORANGE,
+      url: COLOR_ORANGE,
+      langCSS: COLOR_ORANGE,
+      atrule: COLOR_OCEAN,
+      attrValue: COLOR_OCEAN,
+      keyword: COLOR_OCEAN,
+      function: COLOR_OCEAN,
+      className: COLOR_OCEAN,
+      regex: COLOR_YELLOW,
+      important: COLOR_YELLOW,
+      variable: COLOR_YELLOW,
+      csvHeader: COLOR_LEAF,
+      csvSeparator: COLOR_ORANGE,
+      csvStringValue: COLOR_STEEL,
+      csvValue: COLOR_OCEAN,
+    },
   },
   search: {
     height: "50px",

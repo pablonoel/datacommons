@@ -541,8 +541,8 @@ export const Dialog = ({
               z-index: 2;
               pointer-events: ${isInteractive ? "auto" : "none"};
               overflow: hidden;
-              ${theme.elevation.primary}
-              ${theme.radius.primary};
+              ${theme.elevation.high}
+              ${theme.radius.xl};
             `,
             widthCss,
             maxWidthCss,

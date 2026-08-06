@@ -46,7 +46,7 @@ export const DemoTooltips = (): ReactElement => {
           gap: ${theme.spacing.lg}px;
         }
         .box {
-          ${theme.radius.tertiary};
+          ${theme.radius.md};
           background: ${theme.colors.background.secondary.light};
           padding: ${theme.spacing.lg}px;
         }
@@ -118,11 +118,11 @@ export const DemoTooltips = (): ReactElement => {
             onClick={(): void => console.log("click")}
             css={css`
               border: 0;
-              ${theme.box.primary}
-              ${theme.elevation.primary}
+              ${theme.components.linkBox.standard}
+              ${theme.elevation.high}
               ${theme.typography.family.text};
               ${theme.typography.text.md};
-              ${theme.radius.primary};
+              ${theme.radius.xl};
               ${theme.colors.link.primary.base}
               line-height: 1rem;
               display: inline-flex;

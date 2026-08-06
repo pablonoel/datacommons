@@ -134,11 +134,11 @@ export const BrickWall = ({ title, bricks }: BrickWallProps): ReactElement => {
                       `}
 
                       a {
-                        ${theme.box.primary}
-                        ${theme.elevation.primary}
+                        ${theme.components.linkBox.standard}
+                        ${theme.elevation.high}
                         ${theme.typography.family.text}
                         ${theme.typography.text.xl}
-                        ${theme.radius.primary}
+                        ${theme.radius.xl}
                         display: flex;
                         flex-direction: column;
                         align-items: flex-start;

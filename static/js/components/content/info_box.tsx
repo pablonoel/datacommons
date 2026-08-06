@@ -44,13 +44,13 @@ export function InfoBox(props: InfoBoxProps): JSX.Element {
     >
       <div
         css={css`
-          background-color: ${theme.infoBox.backgroundColor};
-          border-radius: ${theme.radius.secondary.borderRadius};
           display: flex;
           flex-direction: row;
           gap: ${theme.spacing.md}px;
-          padding: ${theme.spacing.lg}px;
-          ${theme.infoBox.icon}
+          padding: ${theme.spacing.xl}px ${theme.spacing.lg}px;
+          background-color: ${theme.components.infoBox.backgroundColor};
+          ${theme.radius.lg};
+          ${theme.components.infoBox.icon}
 
           & > svg {
             flex-shrink: 0;
@@ -68,7 +68,7 @@ export function InfoBox(props: InfoBoxProps): JSX.Element {
           {props.heading && (
             <div
               css={css`
-                ${theme.infoBox.heading}
+                ${theme.components.infoBox.heading}
               `}
             >
               {props.heading}

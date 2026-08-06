@@ -177,7 +177,7 @@ export function FacetOptionContent({
                 >
                   <InfoFilled
                     css={css`
-                      color: ${theme.colors.button.primary.light};
+                      color: ${theme.colors.link.primary.light};
                     `}
                   />
                 </Tooltip>

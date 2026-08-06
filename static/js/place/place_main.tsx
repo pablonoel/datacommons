@@ -44,8 +44,12 @@ import {
 } from "./util";
 
 const PlaceWarning = styled.div`
-  padding: 24px;
-  font-size: ${(p): string => p.theme.typography.text.md.fontSize};
+  padding: ${(pd): number => pd.theme.spacing.lg};
+  & > p {
+    font-size: ${(fs): string => fs.theme.typography.text.md.fontSize};
+    line-height: ${(lh): string => lh.theme.typography.text.md.lineHeight};
+    font-weight: ${(fw): number => fw.theme.typography.text.md.fontWeight};
+  }
 `;
 
 /**

@@ -96,7 +96,7 @@ const Partners = ({ partners, gaEvent }: PartnersProps): ReactElement => {
                   box-shadow 0.3s ease-in-out;
                 border: 2px solid transparent;
                 &:hover {
-                  ${theme.elevation.primary}
+                  ${theme.elevation.high}
                   transform: translateY(-5px);
                   border: 2px solid white;
                 }

@@ -280,7 +280,7 @@ class ChartEmbed extends React.Component<
                 justify-content: center;
                 overflow: hidden;
                 border: 1px solid ${theme.colors.border.primary.light};
-                ${theme.radius.tertiary};
+                ${theme.radius.md};
                 padding: ${theme.spacing.md}px;
                 & > svg,
                 & > img {

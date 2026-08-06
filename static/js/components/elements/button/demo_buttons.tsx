@@ -44,7 +44,7 @@ export const DemoButtons = (): ReactElement => {
         }
 
         .section {
-          ${theme.radius.tertiary};
+          ${theme.radius.md};
           background: ${theme.colors.background.secondary.light};
           padding: ${theme.spacing.lg}px;
         }

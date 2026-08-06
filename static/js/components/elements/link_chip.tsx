@@ -62,10 +62,12 @@ export const LinkChip = ({
   const theme = useTheme();
 
   const baseBoxStyle =
-    linkChip.variant === "elevated" ? theme.box.primary : theme.box.secondary;
+    linkChip.variant === "elevated"
+      ? theme.components.linkBox.standard
+      : theme.components.linkBox.inverted;
 
   const baseElevation =
-    linkChip.variant === "elevated" ? theme.elevation.primary : "";
+    linkChip.variant === "elevated" ? theme.elevation.high : "";
 
   const primaryTextColor =
     linkChip.variant === "elevated"
@@ -75,13 +77,13 @@ export const LinkChip = ({
   const colors =
     linkChip.colorVariant === "grey"
       ? css`
-          background-color: ${theme.colors.box.grey.pill};
-          color: ${theme.colors.box.grey.text};
+          background-color: ${theme.components.cards.variant.grey.pill};
+          color: ${theme.components.cards.variant.grey.text};
           svg {
-            fill: ${theme.colors.box.grey.text};
+            fill: ${theme.components.cards.variant.grey.text};
           }
           &:hover {
-            background-color: ${theme.colors.box.grey.pill};
+            background-color: ${theme.components.cards.variant.grey.pill};
             text-decoration: none;
           }
         `
@@ -112,9 +114,9 @@ export const LinkChip = ({
     ${baseBoxStyle};
     ${colors}
     ${baseElevation};
-    ${textSize};
     ${theme.typography.family.text};
-    ${theme.radius.primary};
+    ${theme.typography.text.md};
+    ${theme.radius.xl};
     line-height: 1rem;
     display: inline-flex;
     justify-content: center;
